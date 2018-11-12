@@ -51,9 +51,16 @@ class _MyHomePageState extends State<MyHomePage> {
       body: new Stack(
         children: [
           new Page(
-            viewModel: pages[0],
+            viewModel: pages[1],
           ),
           new PageReveal(
+            percentReveal: 2.5,
+            child: new Page(
+              viewModel: pages[0],
+            ),
+          ),
+          new PageReveal(
+            percentReveal: 3.5,
             child: new Page(
               viewModel: pages[1],
             ),
