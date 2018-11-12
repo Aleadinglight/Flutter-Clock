@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clock/pages.dart';
+import 'package:flutter_clock/pages_reveal.dart';
 
 void main() => runApp(new MyApp());
 
@@ -52,8 +53,10 @@ class _MyHomePageState extends State<MyHomePage> {
           new Page(
             viewModel: pages[0],
           ),
-          new Page(
-            viewModel: pages[1],
+          new PageReveal(
+            child: new Page(
+              viewModel: pages[1],
+            ),
           ),
         ],
       ),
