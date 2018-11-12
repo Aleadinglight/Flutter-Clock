@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 final pages = [
   new PageModel(
     Colors.orange,
+  ),
+  new PageModel(
+    Color(0xFF263238),
   )
 ];
 
@@ -15,7 +18,11 @@ class Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Container();
+    return new MaterialApp(
+      home: new Scaffold(
+        backgroundColor: viewModel.color,
+      ),
+    );
   }
 }
 
